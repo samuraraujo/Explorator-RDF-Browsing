@@ -53,3 +53,7 @@ You can run Explorator inside the AptanaStudio as well.
 Open the FIREFOX browser and access  http://localhost:3000/. It will also be accessible from an external url if your server is visible on the Web; substitute "localhost" by your server's address, e.g.,  http://example.org:3000/.
 
 Note: Explorator does not work in Microsoft Internet Explorer.
+
+#How to use Explorator
+
+Visit: [http://www.tecweb.inf.puc-rio.br/explorator/wiki/Howto]
