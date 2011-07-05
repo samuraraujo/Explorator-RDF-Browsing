@@ -57,3 +57,7 @@ Note: Explorator does not work in Microsoft Internet Explorer.
 #Example
 
 Please visit: http://www.tecweb.inf.puc-rio.br/explorator/wiki/Sample
+
+#Publication 
+
+Araujo S.; Schwabe D., Barbosa S.  - Experimenting with Explorator: a Direct Manipulation Generic RDF Browser and Querying Tool. Visual Interfaces to the Social and the Semantic Web (VISSW 2009), Sanibel Island, Florida - February 2009 
