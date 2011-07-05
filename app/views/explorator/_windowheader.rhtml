@@ -1,0 +1,43 @@
+<div class ='windowheader _NO_MINIMIZE'>
+    <div class="windowtitle">
+        <font style='font-size:11px;font-weight:normal'>
+            (<%= @size %> resources)
+        </font>
+    </div>
+    <div class=' winoperations '>        
+	 
+        <div class ='_subject_view' <%=@style_s%>>
+            <span class="tool">S<span class="tip">Group by subject</span></span>
+        </div>
+        <div class ='_predicate_view' <%=@style_p%>>
+            <span class="tool">P<span class="tip">Group by predicate</span></span>
+        </div>
+        <div class ='_object_view' <%=@style_o%>>
+            <span class="tool">O<span class="tip">Group by objects</span></span>
+        </div>
+		
+		 <div class ='_hide'>
+                       <div>
+                        <span class="tool"> &nbsp;<span class="tip">Minimize the window.</span></span></div>
+        </div>
+        <div class ='_show'>
+           <div>
+                        <span class="tool"> &nbsp;<span class="tip">Maximize the window.</span></span></div>
+        </div>
+        <div class ='_remove'>
+            X
+        </div>
+        &nbsp;
+    </div>
+    &nbsp;
+</div>
+<div class ='windowheader _NO_MINIMIZE' id='resname'>
+ <div class="windowtitle">
+ 	<%editid = UUID.random_create.to_s%>
+    	<div id="<%=editid%>"><%= resourceset.explorator::name %></div>
+		<script type="text/javascript">
+ 			new Ajax.InPlaceEditor('<%=editid%>', '/explorator/editSetName?uri=<%=uri(resourceset)%>',{okControl:"false",cancelControl:"false",submitOnBlur:"true"});
+		</script>
+
+    </div> &nbsp;
+</div>

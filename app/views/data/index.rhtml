@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Aptana RadRails</title>
+
+    </head>
+    <body>
+    <% Dir.foreach("public/data") {|x| %>
+	    <a href = "/data/<%=x%>"><%=x%></a><br>
+	<% }%>
+    
+
+            </body>
+</html>

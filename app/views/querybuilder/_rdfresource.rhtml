@@ -1,0 +1,9 @@
+ 
+<div class = " _WINDOW  node  <%=css(resource)%> querybuilderresource "  resource="<%=(uri(resource)) %>" exp="('<%=h(uri(resource)) %>',:p,:o)" onmouseover="Tip('<%= h(to_s(resource)) %>',DELAY, 1000);" onmouseout="UnTip();">
+    <div class ="resourceuioperations _NO_MINIMIZE">       
+        <div class = "removerelation">
+            x
+        </div>
+    </div> 
+    <%= render_resource(resource) %>
+   

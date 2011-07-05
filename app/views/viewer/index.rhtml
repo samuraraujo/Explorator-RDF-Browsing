@@ -1,0 +1,17 @@
+<div class ="_WINDOW config " id ="viewwindow">
+    <div class=' winoperations _NO_MINIMIZE '>
+        <div class ='_remove'>
+            X
+        </div>
+        &nbsp;
+    </div>
+    <br>
+    <form id ="formlabelexpression" method = "post" action = '/viewer/setviewer'>
+        <input type="hidden" name = "setid" value = '<%=@setid%>'/> 
+        <h1>Expression:</h1>
+        <textarea value ="" rows='17' cols="55" name= "value"><%=@view%></textarea>
+        <br>
+        <input type="button" onclick="$('formlabelexpression').request({ onComplete: function(){ alert('View saved!') }});$('viewwindow').remove();"  save" value="save"> <input type="button" class = "_remove"  name="cancel" value="cancel">
+    </form>     
+    &nbsp;
+</div>

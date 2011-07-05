@@ -1,0 +1,3 @@
+<div class = "toolbar" id = "listenabledrepositories">
+    <span class="blue">Enabled repositories:</span>&nbsp;&nbsp;  <a onclick ="ajax_request('/repository/index')"><%= session[:enablerepositories].join(', ')[0..100]  %>...  </a>
+</div>

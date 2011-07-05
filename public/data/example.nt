@@ -1,0 +1,14 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ex: <http://example.org/> .
+
+ex:john foaf:interest ex:music.
+ex:john foaf:interest ex:dance.
+ex:john foaf:gender ex:masculine.
+ex:john foaf:age "31".
+ex:peter foaf:interest ex:music.
+ex:peter foaf:gender ex:masculine.
+ex:peter foaf:age "22".
+ex:ana foaf:gender ex:feminine.
+ex:ana foaf:interest ex:dance.
+ex:ana foaf:interest ex:soccer.
+ex:ana foaf:age "22".

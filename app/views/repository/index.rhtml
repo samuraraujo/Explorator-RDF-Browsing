@@ -1,0 +1,76 @@
+<div class ="_WINDOW config  " id ="repositorywindow">
+    <div class=' winoperations _NO_MINIMIZE '>
+        <div class ='_close'>
+            X
+        </div>
+        &nbsp;
+    </div>
+	<h1>Configurations</h1>
+	<center>
+  <table cellpadding=4 border="0">
+        <tr   align=left bgcolor="#efefef" >
+         
+             
+            <td>
+               <input name="autodiscovery"  onchange="new Ajax.Request('/repository/autodiscovery?flag='+this.checked,{  method: 'get'} )" type="checkbox" <%= 'checked' if  session[:autodiscovery] == 'true'%> />
+            </td>
+             <td nowrap>
+                Auto-discovery endpoint
+            </td>
+        </tr>
+		 <tr   align=left  >
+           
+            <td>
+               <input name="queryRetrieveLabelAndType"  onchange="new Ajax.Request('/repository/queryRetrieveLabelAndType?flag='+this.checked,{  method: 'get'} )" type="checkbox" <%= 'checked' if  session[:query_retrieve_label_and_type] == true%> />
+            </td>
+           <td nowrap>
+                Retrieve label and type on queries
+            </td>
+             
+        </tr>
+		</table>
+	     </center> 
+    <br>
+	
+    <h1>Enable/Disable Repositories</h1>
+    <%= render_component :action => "endpointsform", :layout => false %>
+    <br>
+    <br>
+    <br>
+    <h1>Add Sparql Endpoint</h1>
+    <table width="100%" border="0">
+        <tr bgcolor="#9f9f9f" align=center class="tableheader">
+            <td>
+                Repository Title
+            </td>
+            <td>
+                Sparql URL
+            </td>
+            <td>
+                Query Limit
+            </td>
+            <td bgcolor=white>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id = "sparqltitle" name = "title" value = "" size ="15" style="border-color: #cfcfcf; width:100%;"/>
+            </td>
+            <td>
+                <input id = "sparqluri" name = "sparqlendpoint" value = "" size ="40" style="border-color: #cfcfcf; width:100%;"/>
+            </td>
+            <td>
+                <input id = "sparqllimit" name = "sparqllimit" value = "200" size ="6" style="border-color: #cfcfcf; width:100%;"/>
+            </td>
+            <td align=center>
+                <input name = "title" type="button" value = "Add"  onclick = "ajax_update('endpointsform', '/repository/add?title=' + $F($('sparqltitle')) + '&uri=' + $F($('sparqluri')) + '&limit=' + $F($('sparqllimit'))); $('endpointsform').innerHTML = 'Adding new sparql endpoint ... '     " style ="background-color: #efefef; color: #4f94cd; "/>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <input type="button" class = "_close" name="Close" value="Close">
+	<br>
+		<br>
+			<br>
+</div>

@@ -1,0 +1,45 @@
+<table class ='tuple' width='100%' cellspace='2' border='0'>
+    <tr>
+        <td width='1%' >
+            <div class=' _WINDOW property  querybuilderresource'>
+                <%= render :partial => 'property' %>
+                <% @resource= Namespace.lookup(:rdfs,:Resource) %>
+            </div>
+        </td>
+        <td>
+            <table cellspace='2'>
+                <tr>
+                    <td width='1%'>
+                        <%  
+						if params[:literal] == 'true' %>
+                        <%= render :partial => 'literal' %>
+                        <%else %>
+						 <%= render :partial => 'rdfresource' %>
+                        <%end %>
+                    </td>
+                    <td width='1%' valign='top' height='100%'class='curlbracket'>
+                        <table height='100%' cellpadding='0' cellspacing='0' border='0'>
+                            <tr>
+                                <td>
+                                    <img src= '/images/bracket_top.gif'>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height='100%' background='/images/bracket_back.gif'>
+                                    <img src= '/images/bracket_middle.gif'>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src= '/images/bracket_bottom.gif'>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class='relation' width='100%'>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

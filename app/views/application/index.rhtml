@@ -1,0 +1,33 @@
+<div class ="_WINDOW config " id="appwindow">
+  <div class=' winoperations _NO_MINIMIZE '>       
+        <div class ='_close'>
+            X
+        </div>
+        &nbsp;
+    </div>
+    <br>
+    <h1>List of Sessions</h1>
+    <table width="100%" border="1">
+        <%@applications.each do |app| %>
+        <tr>
+            <td>
+                <%=app.localname %> <% if app.is_current? %>(current)<%end%>
+            </td>
+               <td>
+				<a href = "/application/restore?uri=<%=h(uri(app))%>">Load</a>
+            </td>
+			   <td>
+				<a href="#" onclick="new Ajax.Request('/application/delete?uri=<%=h(uri(app))%>',{  method: 'get'} );$('appwindow').remove();ajax_request('/application/index');">Delete</a>
+            </td>
+        </tr><%end %>           
+    </table>
+	    <br>
+    <h1>Save the current session as:</h1>
+
+	  <form id ="formnewapp" method = "post" action = '/application/create'>       
+        Application name: <input type ='text' name ="name" />	 
+       <input type="submit"  save" value="save"> <input type="button" class = "_remove"  name="cancel" value="cancel">
+		
+    </form>		 
+	    
+</div>

@@ -1,0 +1,58 @@
+ <div id = "endpointsform">
+ <table width="100%" border="0">
+     
+        <tr bgcolor="#9f9f9f" align=center>
+            <td width="10%" class="tableheader">
+                Enable
+            </td>
+            <td width="10%" class="tableheader">
+                Disable
+            </td>
+
+            <td class="tableheader">
+            	
+                Repository
+            </td>
+            <td width="15%"  class="tableheader" >
+                Query 	Limit
+            </td>
+        </tr>
+	
+		        <% i = true
+		@repositories.each do |repository|
+           i = !i
+ %>
+        <tr <%if i %>bgcolor="#efefef" <%end%> >
+            <td align='center'>
+                <input name="<%=repository.title%>" title="Click to enable" onchange="new Ajax.Request('/repository/enable?title='+this.name,{  method: 'get'} );ajax_update('listenabledrepositories','/repository/listenabledrepositories');" type="radio" value="enable"<%= 'checked' if repository.enable %>/>
+            </td>
+            <td align='center'>
+                <input name="<%=repository.title%>" title="Click to disable"  onchange="new Ajax.Request('/repository/disable?title='+this.name, {  method: 'get'} );ajax_update('listenabledrepositories','/repository/listenabledrepositories');" type="radio" value="disable"<%= 'checked' if !repository.enable %>/>
+            </td>
+
+            <td>
+                <%=repository.title %>
+            </td>
+            <td align=center >
+            	
+                <input id = "limit"  onchange="new Ajax.Request('/repository/limit?title='+this.name + '&limit='+this.value,{  method: 'get'} );"  name = "<%=repository.title%>" value = "<%=repository.limit%>" size ="6" style="border-color: #cfcfcf; width:100%;"/>
+            </td>
+        </tr><%end %>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td  >
+                <input type = "button" onclick="$$('input[value=enable]').each(function(s) { s.click();});" value = "Enable All" style = "background-color: #efefef; color: #4f94cd; font-size: 12px;">
+            </td>
+            <td>
+                <input type = "button" onclick="$$('input[value=disable]').each(function(s) { s.click();});" value = "Disable All" style = "background-color: #efefef; color: #4f94cd; font-size: 12px;">
+            </td>
+            <td>
+            </td>
+    </table>
+ </div> 
+ <%=render_component (:controller => 'message',:action => params[:messageaction] != nil ? params[:messageaction] : 'error',:params => { :message => @message }  ,:layout => false) if @message !=nil %>
+ <script>
+ 	ajax_update('listenabledrepositories','/repository/listenabledrepositories');
+ </script>

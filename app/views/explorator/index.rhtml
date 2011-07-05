@@ -1,0 +1,11 @@
+
+<% 
+ 
+session[:application].sets.each do |xset| 
+ 
+ 
+#This typecast is necessary because ActiveRDF create every resource as RDFS::Resource
+@resourceset = session[:application].get(xset.uri)
+%> 
+<%= render :partial => 'subject_view' %>
+<%end%> 

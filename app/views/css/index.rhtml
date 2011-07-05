@@ -1,0 +1,20 @@
+<div class ="_WINDOW config " id="csswindow">
+    <div class=' winoperations _NO_MINIMIZE '>
+        <div class ='_remove'>
+            X
+        </div>
+        &nbsp;
+    </div>
+    <br>
+    <form id = "cssform">
+         
+        <h1>Resources CSS</h1>
+        <textarea id = "csstext" rows='17'  ></textarea>
+		<script>document.forms['cssform'].elements['csstext'].value=getDynamicCssRules();</script>
+        <br>
+	 
+        <input type="button" onclick="setDynamicCssRules(); $('csswindow').remove();"    value="save"> <input type="button" class = "_remove" name="cancel" value="cancel">
+		<%= render :partial => '/css/css' %>
+    </form>
+
+</div>

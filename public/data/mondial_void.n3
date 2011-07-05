@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix ex: <http://example.com/void/datasets/> .
+@prefix : <#> .
+:MONDIAL	a void:Dataset ;
+			dcterms:title "MONDIAL" ;
+dcterms:description "RDF data extracted from MONDIAL" ;
+		foaf:homepage <http://www.semwebtech.org> ;
+void:exampleResource <http://www.semwebtech.org/mondial/10/meta#onEthnicGroup> ;		 			
+dcterms:source <http://www.dbis.informatik.uni-goettingen.de/Mondial/> ;
+dcterms:modified "2008-11-17"^^xsd:date .

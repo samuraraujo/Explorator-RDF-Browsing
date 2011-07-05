@@ -1,0 +1,24 @@
+ <div class="_WINDOW filterwindow   " id = "filterwindow">
+     <div class=' winoperations _NO_MINIMIZE '>
+        <div class ='_remove'>
+            X
+        </div>
+        &nbsp;
+    </div>
+    <br>
+	 <h1>User Define Filter</h1>
+	<form id ="formfilter" method = "post" action = '/explorator/setviewer'>
+		<input type="hidden" name = "uri" value = '<%=@uri%>'/> 
+        <table border ="1">           
+            <tr>
+                <td colspan=2>
+                    <textarea name = "value" cols='33' rows='5'></textarea>
+                </td>
+                <td>
+            <input type = 'button' value ="Y"  onclick="$('formfilter').up('._WINDOW').select('.tranparentpanel').first().setStyle({display: 'block', position: 'absolute', width: '100%', height: '100%'  });$('formfilter').request({ onComplete: function(){ $('<%=@uri%>').crt_refresh() }});$('filterwindow').remove();">
+                </td>
+            </tr>
+        </table>
+    </form> <br> <br> <br><br><br><br><br><br>
+</div>
+ 
