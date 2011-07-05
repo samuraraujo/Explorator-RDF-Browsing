@@ -56,4 +56,4 @@ Note: Explorator does not work in Microsoft Internet Explorer.
 
 #How to use Explorator
 
-Visit: [http://www.tecweb.inf.puc-rio.br/explorator/wiki/Howto]
+Visit: http://www.tecweb.inf.puc-rio.br/explorator/wiki/Howto
