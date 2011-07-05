@@ -42,9 +42,11 @@ This installation of Explorator comes with several repositories pre-configured, 
 
 #Running Explorator
 
-To run Explorator, open a command window in the EXPLORATOR_DIRECTORY and execute the command: ruby script/server
+To run Explorator, open a command window in the EXPLORATOR_DIRECTORY and execute the command: 
 
-You can run Explorator inside the AptanaStudio? as well.
+	ruby script/server
+
+You can run Explorator inside the AptanaStudio as well.
 
 #Accessing Explorator
 
