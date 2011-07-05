@@ -54,6 +54,6 @@ Open the FIREFOX browser and access  http://localhost:3000/. It will also be acc
 
 Note: Explorator does not work in Microsoft Internet Explorer.
 
-#How to use Explorator
+#Example
 
-Visit: http://www.tecweb.inf.puc-rio.br/explorator/wiki/Howto
+Please visit: http://www.tecweb.inf.puc-rio.br/explorator/wiki/Sample
