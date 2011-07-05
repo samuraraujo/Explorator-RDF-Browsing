@@ -27,11 +27,11 @@ Follow the steps below to achieve this task.
 
 Execute each command below in a command window in this exact order for install Rails and ActiveRDF.
 
- gem install  rails --include-dependencies -y
- gem install -v=1.0.7 uuidtools --include-dependencies -y
- gem install activemerchant
- gem install mime-types
- gem install rjb -v 1.1.2
+  gem install  rails --include-dependencies -y
+  gem install -v=1.0.7 uuidtools --include-dependencies -y
+  gem install activemerchant
+  gem install mime-types
+  gem install rjb -v 1.1.2
 
 On Windows platform, if prompted, always select the mswin32 option.
 Configuration
