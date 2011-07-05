@@ -4,6 +4,8 @@ Explorator is a tool for exploring RDF data by direct manipulation. Exploratorâ€
 
 You can access a demo of Explorator here: http://www.tecweb.inf.puc-rio.br/explorator/demo (doesn't work properly in IE). 
 
+<embed src="http://blip.tv/play/AennPgI" type="application/x-shockwave-flash" width="480" height="390" wmode="transparent" allowscriptaccess="always" allowfullscreen="true" ></embed>
+
 #Explorator Instalation
 
 This page describes how to install Explorator - Semantic Exploration of RDF Data. Explorator is semantic browser for RDF data set. It is built on Ruby, Ruby-on-Rails and ActiveRDF.
