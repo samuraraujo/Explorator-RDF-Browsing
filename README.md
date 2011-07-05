@@ -9,7 +9,8 @@ You can access a demo of Explorator here: http://www.tecweb.inf.puc-rio.br/explo
 This page describes how to install Explorator - Semantic Exploration of RDF Data. Explorator is semantic browser for RDF data set. It is built on Ruby, Ruby-on-Rails and ActiveRDF.
 
 All the steps below were tested in Windows XP and Mac OS X, but they should work for others platforms such as Linux.
-Prerequisite
+
+#Prerequisite
 
 You must have Java installed, and the JAVA_HOME environment variable MUST be defined.
 If you fail to do this, the Sesame database will not load!
@@ -26,11 +27,11 @@ Follow the steps below to achieve this task.
 
 Execute each command below in a command window in this exact order for install Rails and ActiveRDF.
 
- gem install  rails --include-dependencies -y
- gem install -v=1.0.7 uuidtools --include-dependencies -y
- gem install activemerchant
- gem install mime-types
- gem install rjb -v 1.1.2
+	gem install  rails --include-dependencies -y
+	gem install -v=1.0.7 uuidtools --include-dependencies -y
+	gem install activemerchant
+	gem install mime-types
+	gem install rjb -v 1.1.2
 
 On Windows platform, if prompted, always select the mswin32 option.
 Configuration
